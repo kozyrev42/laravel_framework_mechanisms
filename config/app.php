@@ -170,6 +170,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         
         App\Providers\MyCustomServiceProvider::class,
+
+        // регистрация сервиса MyMultiplicationService
+        App\Providers\MyMultiplicationServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -185,6 +188,9 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+
+        // Регистрация псевдонима фасада для обращения к фасаду MyMultiplicationServiceFacade в контейнере.
+        'MyMultiplicationService' => App\Facades\MyMultiplicationServiceFacade::class,
     ])->toArray(),
 
 ];

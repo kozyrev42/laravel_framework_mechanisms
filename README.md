@@ -9,3 +9,11 @@
 - "MyCustomService" зарегистрирован в "MyCustomServiceProvider"
 - "MyCustomServiceProvider" зарегистрирован в приложении Laravel в "config/app.php"
 - написана консольная-команда, в которой вызываем метод через контейнер app();
+
+3. Реализуем собственный Фасад для сервиса MyMultiplicationService
+- Создан сервис MyMultiplicationService
+- Регистрация сервиса MyMultiplicationService в MyMultiplicationServiceProvider  в контейнере служб Laravel.
+- Регистрация сервис-провайдера в 'providers' в файле конфигурации config/app.php
+- Создание класса фасада MyMultiplicationServiceFacade
+- Регистрация псевдонима фасада в массиве aliases файла config/app.php
+- Написана консольная команда для тестирования фасада.
